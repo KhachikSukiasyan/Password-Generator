@@ -30,7 +30,15 @@ namespace PasswordConsoleApplication
             }
 
             Console.WriteLine();
-            PasswordClassLibrary.PasswordClassLibrary.NewPinCode(length, count);
+
+            //-- HERE
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine(PasswordClass.NewPinCode(length));
+            }
+
+            
+
             Console.ReadKey();
         }
     }
