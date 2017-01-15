@@ -1,4 +1,4 @@
-# Password
+# Password generator
 ##DESCRIPTION
 Simple static class in C# for generating HEX codes with cryptographic sequrity.
 Includes one function.
