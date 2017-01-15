@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.SettingsGroupBox = new System.Windows.Forms.GroupBox();
-            this.passCountTextBox = new System.Windows.Forms.TextBox();
             this.mulPassCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.uComboBox2 = new System.Windows.Forms.ComboBox();
+            this.uComboBox1 = new System.Windows.Forms.ComboBox();
+            this.lComboBox2 = new System.Windows.Forms.ComboBox();
+            this.lComboBox1 = new System.Windows.Forms.ComboBox();
             this.digit2UpDown = new System.Windows.Forms.NumericUpDown();
             this.digit1UpDown = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
@@ -49,21 +52,19 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.resultTextBox = new System.Windows.Forms.TextBox();
             this.mainButton = new System.Windows.Forms.Button();
-            this.lComboBox1 = new System.Windows.Forms.ComboBox();
-            this.lComboBox2 = new System.Windows.Forms.ComboBox();
-            this.uComboBox1 = new System.Windows.Forms.ComboBox();
-            this.uComboBox2 = new System.Windows.Forms.ComboBox();
+            this.mutipleUpDown = new System.Windows.Forms.NumericUpDown();
             this.SettingsGroupBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.digit2UpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.digit1UpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lengthUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mutipleUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // SettingsGroupBox
             // 
-            this.SettingsGroupBox.Controls.Add(this.passCountTextBox);
+            this.SettingsGroupBox.Controls.Add(this.mutipleUpDown);
             this.SettingsGroupBox.Controls.Add(this.mulPassCheckBox);
             this.SettingsGroupBox.Controls.Add(this.groupBox2);
             this.SettingsGroupBox.Controls.Add(this.label1);
@@ -75,14 +76,6 @@
             this.SettingsGroupBox.TabIndex = 0;
             this.SettingsGroupBox.TabStop = false;
             this.SettingsGroupBox.Text = "Settings";
-            // 
-            // passCountTextBox
-            // 
-            this.passCountTextBox.Enabled = false;
-            this.passCountTextBox.Location = new System.Drawing.Point(203, 312);
-            this.passCountTextBox.Name = "passCountTextBox";
-            this.passCountTextBox.Size = new System.Drawing.Size(40, 21);
-            this.passCountTextBox.TabIndex = 15;
             // 
             // mulPassCheckBox
             // 
@@ -120,6 +113,150 @@
             this.groupBox2.Size = new System.Drawing.Size(285, 244);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
+            // 
+            // uComboBox2
+            // 
+            this.uComboBox2.Enabled = false;
+            this.uComboBox2.FormattingEnabled = true;
+            this.uComboBox2.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z"});
+            this.uComboBox2.Location = new System.Drawing.Point(183, 173);
+            this.uComboBox2.Name = "uComboBox2";
+            this.uComboBox2.Size = new System.Drawing.Size(39, 23);
+            this.uComboBox2.TabIndex = 21;
+            this.uComboBox2.Text = "Z";
+            // 
+            // uComboBox1
+            // 
+            this.uComboBox1.Enabled = false;
+            this.uComboBox1.FormattingEnabled = true;
+            this.uComboBox1.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z"});
+            this.uComboBox1.Location = new System.Drawing.Point(93, 173);
+            this.uComboBox1.Name = "uComboBox1";
+            this.uComboBox1.Size = new System.Drawing.Size(39, 23);
+            this.uComboBox1.TabIndex = 20;
+            this.uComboBox1.Text = "A";
+            // 
+            // lComboBox2
+            // 
+            this.lComboBox2.Enabled = false;
+            this.lComboBox2.FormattingEnabled = true;
+            this.lComboBox2.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "o",
+            "p",
+            "q",
+            "r",
+            "s",
+            "t",
+            "u",
+            "v",
+            "w",
+            "x",
+            "y",
+            "z"});
+            this.lComboBox2.Location = new System.Drawing.Point(184, 106);
+            this.lComboBox2.Name = "lComboBox2";
+            this.lComboBox2.Size = new System.Drawing.Size(39, 23);
+            this.lComboBox2.TabIndex = 19;
+            this.lComboBox2.Text = "z";
+            // 
+            // lComboBox1
+            // 
+            this.lComboBox1.Enabled = false;
+            this.lComboBox1.FormattingEnabled = true;
+            this.lComboBox1.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "o",
+            "p",
+            "q",
+            "r",
+            "s",
+            "t",
+            "u",
+            "v",
+            "w",
+            "x",
+            "y",
+            "z"});
+            this.lComboBox1.Location = new System.Drawing.Point(93, 106);
+            this.lComboBox1.Name = "lComboBox1";
+            this.lComboBox1.Size = new System.Drawing.Size(39, 23);
+            this.lComboBox1.TabIndex = 18;
+            this.lComboBox1.Text = "a";
             // 
             // digit2UpDown
             // 
@@ -310,149 +447,17 @@
             this.mainButton.UseVisualStyleBackColor = true;
             this.mainButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mainButton_MouseClick);
             // 
-            // lComboBox1
+            // mutipleUpDown
             // 
-            this.lComboBox1.Enabled = false;
-            this.lComboBox1.FormattingEnabled = true;
-            this.lComboBox1.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "c",
-            "d",
-            "e",
-            "f",
-            "g",
-            "h",
-            "j",
-            "k",
-            "l",
-            "m",
-            "n",
-            "o",
-            "p",
-            "q",
-            "r",
-            "s",
-            "t",
-            "u",
-            "v",
-            "w",
-            "x",
-            "y",
-            "z"});
-            this.lComboBox1.Location = new System.Drawing.Point(93, 106);
-            this.lComboBox1.Name = "lComboBox1";
-            this.lComboBox1.Size = new System.Drawing.Size(39, 23);
-            this.lComboBox1.TabIndex = 18;
-            this.lComboBox1.Text = "a";
-            // 
-            // lComboBox2
-            // 
-            this.lComboBox2.Enabled = false;
-            this.lComboBox2.FormattingEnabled = true;
-            this.lComboBox2.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "c",
-            "d",
-            "e",
-            "f",
-            "g",
-            "h",
-            "j",
-            "k",
-            "l",
-            "m",
-            "n",
-            "o",
-            "p",
-            "q",
-            "r",
-            "s",
-            "t",
-            "u",
-            "v",
-            "w",
-            "x",
-            "y",
-            "z"});
-            this.lComboBox2.Location = new System.Drawing.Point(184, 106);
-            this.lComboBox2.Name = "lComboBox2";
-            this.lComboBox2.Size = new System.Drawing.Size(39, 23);
-            this.lComboBox2.TabIndex = 19;
-            this.lComboBox2.Text = "z";
-            // 
-            // uComboBox1
-            // 
-            this.uComboBox1.Enabled = false;
-            this.uComboBox1.FormattingEnabled = true;
-            this.uComboBox1.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O",
-            "P",
-            "Q",
-            "R",
-            "S",
-            "T",
-            "U",
-            "V",
-            "W",
-            "X",
-            "Y",
-            "Z"});
-            this.uComboBox1.Location = new System.Drawing.Point(93, 173);
-            this.uComboBox1.Name = "uComboBox1";
-            this.uComboBox1.Size = new System.Drawing.Size(39, 23);
-            this.uComboBox1.TabIndex = 20;
-            this.uComboBox1.Text = "A";
-            // 
-            // uComboBox2
-            // 
-            this.uComboBox2.Enabled = false;
-            this.uComboBox2.FormattingEnabled = true;
-            this.uComboBox2.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O",
-            "P",
-            "Q",
-            "R",
-            "S",
-            "T",
-            "U",
-            "V",
-            "W",
-            "X",
-            "Y",
-            "Z"});
-            this.uComboBox2.Location = new System.Drawing.Point(183, 173);
-            this.uComboBox2.Name = "uComboBox2";
-            this.uComboBox2.Size = new System.Drawing.Size(39, 23);
-            this.uComboBox2.TabIndex = 21;
-            this.uComboBox2.Text = "Z";
+            this.mutipleUpDown.Location = new System.Drawing.Point(204, 312);
+            this.mutipleUpDown.Name = "mutipleUpDown";
+            this.mutipleUpDown.Size = new System.Drawing.Size(57, 21);
+            this.mutipleUpDown.TabIndex = 4;
+            this.mutipleUpDown.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             // 
             // MainForm
             // 
@@ -472,6 +477,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lengthUpDown)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mutipleUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -492,7 +498,6 @@
         private System.Windows.Forms.Label dTo;
         private System.Windows.Forms.Label dFrom;
         private System.Windows.Forms.CheckBox digitCheckBox;
-        private System.Windows.Forms.TextBox passCountTextBox;
         private System.Windows.Forms.CheckBox mulPassCheckBox;
         private System.Windows.Forms.NumericUpDown digit2UpDown;
         private System.Windows.Forms.NumericUpDown digit1UpDown;
@@ -503,6 +508,7 @@
         private System.Windows.Forms.ComboBox uComboBox1;
         private System.Windows.Forms.ComboBox lComboBox2;
         private System.Windows.Forms.ComboBox lComboBox1;
+        private System.Windows.Forms.NumericUpDown mutipleUpDown;
     }
 }
 

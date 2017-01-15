@@ -22,7 +22,85 @@ namespace TestForm
         // button
         private void mainButton_MouseClick(object sender, MouseEventArgs e)
         {
-            resultTextBox.Text = "afagfdgsfhsghfg";
+
+
+            if (digitCheckBox.Checked)
+            {
+                if (lowCheckBox.Checked)
+                {
+                    if (upCheckBox.Checked)
+                    {
+                        resultTextBox.Text = PasswordClass.pinCodeWithDigitsLetters((int)lengthUpDown.Value,
+                                                                                    (int)digit1UpDown.Value,
+                                                                                    (int)digit2UpDown.Value,
+                                                                                    lComboBox1.Text[0],
+                                                                                    lComboBox2.Text[0],
+                                                                                    uComboBox1.Text[0],
+                                                                                    uComboBox2.Text[0]);
+                    }
+                    else
+                    {
+                        resultTextBox.Text = PasswordClass.pinCodeWithDigitsLowerCaseLetters((int)lengthUpDown.Value,
+                                                                                (int)digit1UpDown.Value,
+                                                                                (int)digit2UpDown.Value,
+                                                                                lComboBox1.Text[0],
+                                                                                lComboBox2.Text[0]
+                                                                                                    );
+                    }
+                }
+                else
+                {
+                    if (upCheckBox.Checked)
+                    {
+                        resultTextBox.Text = PasswordClass.pinCodeWithDigitsUpperCaseLetters((int)lengthUpDown.Value,
+                                                                                (int)digit1UpDown.Value,
+                                                                                (int)digit2UpDown.Value,
+                                                                                uComboBox1.Text[0],
+                                                                                uComboBox2.Text[0]
+                                                                                                    );
+                    }
+                    else
+                    {
+                        resultTextBox.Text = PasswordClass.pinCodeWithDigits((int)lengthUpDown.Value,
+                                                                                (int)digit1UpDown.Value,
+                                                                                (int)digit2UpDown.Value
+                                                                                                    );
+                    }
+                }
+            }
+            else
+            {
+                if (lowCheckBox.Checked)
+                {
+                    if (upCheckBox.Checked)
+                    {
+                        resultTextBox.Text = PasswordClass.pinCodeWithDifferentCaseLetters((int)lengthUpDown.Value,
+                                                                                    lComboBox1.Text[0],
+                                                                                    lComboBox2.Text[0],
+                                                                                    uComboBox1.Text[0],
+                                                                                    uComboBox2.Text[0]
+                                                                                                   );
+                    }
+                    else
+                    {
+                        resultTextBox.Text = PasswordClass.pinCodeWithLowerCaseLetters((int)lengthUpDown.Value,
+                                                                                   lComboBox1.Text[0],
+                                                                                   lComboBox2.Text[0]
+                                                                                                  );
+                    }
+                }
+                else
+                {
+                    resultTextBox.Text = PasswordClass.pinCodeWithUpperCaseLetters((int)lengthUpDown.Value,
+                                                                                    uComboBox1.Text[0],
+                                                                                    uComboBox2.Text[0]
+                                                                                                       );
+
+                }
+            }
+
+            
+
         }
 
 
@@ -90,9 +168,9 @@ namespace TestForm
         private void mulPassCheckBox_MouseClick(object sender, MouseEventArgs e)
         {
             if (mulPassCheckBox.Checked)
-               passCountTextBox.Enabled = true;
+                mutipleUpDown.Enabled = true;
             else
-                passCountTextBox.Enabled = false;
+                mutipleUpDown.Enabled = false;
 
         }
 
