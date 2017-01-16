@@ -8,7 +8,7 @@ Static class in C# for generating passwords with cryptographic sequrity.You can 
 ```C#
 // NOTE: in these functions parameters digit1, digit2 describe
 // the range of digits that will be in password.In the same way
-// lowLetter1,lowLetter2 and upLetter1,upLette2 describe the range of lowercase letters
+// lowLetter1,lowLetter2 and upLetter1,upLetter2 describe the range of lowercase letters
 
 1. string pinCodeWithDigits(int length, int digit1, int digit2);
 2. string pinCodeWithLowerCaseLetters(int length, char lowLetter1, char lowLetter2);
