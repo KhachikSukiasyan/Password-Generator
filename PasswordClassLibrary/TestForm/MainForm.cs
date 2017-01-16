@@ -23,83 +23,23 @@ namespace TestForm
         private void mainButton_MouseClick(object sender, MouseEventArgs e)
         {
 
-
-            if (digitCheckBox.Checked)
+            if (mulPassCheckBox.Checked)
             {
-                if (lowCheckBox.Checked)
+                string str = string.Empty;
+                for (int i = 0; i < (int)mutipleUpDown.Value; i++)
                 {
-                    if (upCheckBox.Checked)
-                    {
-                        resultTextBox.Text = PasswordClass.pinCodeWithDigitsLetters((int)lengthUpDown.Value,
-                                                                                    (int)digit1UpDown.Value,
-                                                                                    (int)digit2UpDown.Value,
-                                                                                    lComboBox1.Text[0],
-                                                                                    lComboBox2.Text[0],
-                                                                                    uComboBox1.Text[0],
-                                                                                    uComboBox2.Text[0]);
-                    }
-                    else
-                    {
-                        resultTextBox.Text = PasswordClass.pinCodeWithDigitsLowerCaseLetters((int)lengthUpDown.Value,
-                                                                                (int)digit1UpDown.Value,
-                                                                                (int)digit2UpDown.Value,
-                                                                                lComboBox1.Text[0],
-                                                                                lComboBox2.Text[0]
-                                                                                                    );
-                    }
+                    str += result() + '\n';
                 }
-                else
-                {
-                    if (upCheckBox.Checked)
-                    {
-                        resultTextBox.Text = PasswordClass.pinCodeWithDigitsUpperCaseLetters((int)lengthUpDown.Value,
-                                                                                (int)digit1UpDown.Value,
-                                                                                (int)digit2UpDown.Value,
-                                                                                uComboBox1.Text[0],
-                                                                                uComboBox2.Text[0]
-                                                                                                    );
-                    }
-                    else
-                    {
-                        resultTextBox.Text = PasswordClass.pinCodeWithDigits((int)lengthUpDown.Value,
-                                                                                (int)digit1UpDown.Value,
-                                                                                (int)digit2UpDown.Value
-                                                                                                    );
-                    }
-                }
+
+
+                MultiplePasswordForm newForm = new MultiplePasswordForm();
+                newForm.mainText.Text = str;
+                newForm.ShowDialog();
             }
             else
             {
-                if (lowCheckBox.Checked)
-                {
-                    if (upCheckBox.Checked)
-                    {
-                        resultTextBox.Text = PasswordClass.pinCodeWithDifferentCaseLetters((int)lengthUpDown.Value,
-                                                                                    lComboBox1.Text[0],
-                                                                                    lComboBox2.Text[0],
-                                                                                    uComboBox1.Text[0],
-                                                                                    uComboBox2.Text[0]
-                                                                                                   );
-                    }
-                    else
-                    {
-                        resultTextBox.Text = PasswordClass.pinCodeWithLowerCaseLetters((int)lengthUpDown.Value,
-                                                                                   lComboBox1.Text[0],
-                                                                                   lComboBox2.Text[0]
-                                                                                                  );
-                    }
-                }
-                else
-                {
-                    resultTextBox.Text = PasswordClass.pinCodeWithUpperCaseLetters((int)lengthUpDown.Value,
-                                                                                    uComboBox1.Text[0],
-                                                                                    uComboBox2.Text[0]
-                                                                                                       );
-
-                }
+                resultTextBox.Text = result();
             }
-
-            
 
         }
 
@@ -189,6 +129,47 @@ namespace TestForm
                    digit2UpDown.Enabled = true;
                }
             }
+        }
+
+        private string result()
+        {
+            string res;
+
+            if (digitCheckBox.Checked)
+                if (lowCheckBox.Checked)
+                    if (upCheckBox.Checked)
+                        res = PasswordClass.pinCodeWithDigitsLetters((int)lengthUpDown.Value, (int)digit1UpDown.Value, (int)digit2UpDown.Value,
+                                                                                      lComboBox1.Text[0], lComboBox2.Text[0],
+                                                                                      uComboBox1.Text[0], uComboBox2.Text[0]);
+                    else
+                        res = PasswordClass.pinCodeWithDigitsLowerCaseLetters((int)lengthUpDown.Value, (int)digit1UpDown.Value, (int)digit2UpDown.Value,
+                                                                                lComboBox1.Text[0], lComboBox2.Text[0]
+                                                                                                    );
+                else
+
+                      if (upCheckBox.Checked)
+                        res = PasswordClass.pinCodeWithDigitsUpperCaseLetters((int)lengthUpDown.Value, (int)digit1UpDown.Value, (int)digit2UpDown.Value,
+                                                                            uComboBox1.Text[0], uComboBox2.Text[0]
+                                                                                                );
+                else
+
+                        res = PasswordClass.pinCodeWithDigits((int)lengthUpDown.Value, (int)digit1UpDown.Value, (int)digit2UpDown.Value
+                                                                                                );
+            else
+
+               if (lowCheckBox.Checked)
+                if (upCheckBox.Checked)
+                        res = PasswordClass.pinCodeWithDifferentCaseLetters((int)lengthUpDown.Value, lComboBox1.Text[0], lComboBox2.Text[0],
+                                                                                uComboBox1.Text[0], uComboBox2.Text[0]
+                                                                                               );
+                else
+                        res = PasswordClass.pinCodeWithLowerCaseLetters((int)lengthUpDown.Value, lComboBox1.Text[0], lComboBox2.Text[0]
+                                                                                              );
+            else
+                        res = PasswordClass.pinCodeWithUpperCaseLetters((int)lengthUpDown.Value, uComboBox1.Text[0], uComboBox2.Text[0]
+                                                                                                   );
+
+            return res;
         }
 
     }

@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.mainText = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // mainText
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 12);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(491, 353);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.mainText.Location = new System.Drawing.Point(12, 12);
+            this.mainText.Name = "mainText";
+            this.mainText.Size = new System.Drawing.Size(491, 353);
+            this.mainText.TabIndex = 0;
+            this.mainText.Text = "";
             // 
             // MultiplePasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(515, 377);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.mainText);
             this.Name = "MultiplePasswordForm";
             this.Text = "MultiplePasswordForm";
             this.ResumeLayout(false);
@@ -53,6 +53,6 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        public System.Windows.Forms.RichTextBox mainText;
     }
 }
