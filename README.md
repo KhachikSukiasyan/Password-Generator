@@ -22,3 +22,4 @@ You also can run the windows form application:
 #### 1. Choose the password option you want
 #### 2. Select the desired password length
 #### 3. Click Generate button
+#### 4. If  You want to generate many passwords at a time,turn on the "Multiple passwords".The result will be on another window.
