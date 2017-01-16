@@ -18,7 +18,9 @@ namespace PasswordClassLibrary
         }
 
 
-
+        // NOTE: in these functions parameters digit1, digit2 describe
+        // the range of digits that will be in password.In the same way
+        // lowLetter1,lowLetter2 and upLetter1,upLette2 describe the range of lowercase letters
         public static string pinCodeWithDigits(int length, int digit1, int digit2)
         {
             string str = pinCodes(length,1,passwordType.digits,digit1,digit2);
